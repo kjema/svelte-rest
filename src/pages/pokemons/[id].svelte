@@ -11,24 +11,7 @@
 	}
 </script> -->
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { page } from '$app/stores';
-	import { fetchById } from 'features/pokemons/pokemons.service';
-	import type { Pokemon } from 'features/pokemons/models/pokemon.model';
-
-	let id = $page.params.id;
-	let pokemon: Pokemon = null;
-
-	onMount(async () => {
-		pokemon = (await fetchById(id)) as Pokemon;
-		console.log(pokemon.name);
-	});
+	import Pokemon from 'features/pokemons/pokemon/pokemon.svelte';
 </script>
 
-<svelte:head>
-	<title>Pokemons</title>
-</svelte:head>
-
-{#if pokemon}
-	<h1 class="font-medium text-sm pt-2 pb-12">{pokemon.name}</h1>
-{/if}
+<Pokemon />

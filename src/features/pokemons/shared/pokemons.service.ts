@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store';
 
-import type { GetPokemonsDto } from './dto/get-pokemons.dto';
-import type { Pokemon } from './models/pokemon.model';
+import type { GetPokemonsDto } from './get-pokemons.dto';
+import type { Pokemon } from './pokemon.model';
 
 export const pokemons = writable<Pokemon[]>([]);
 

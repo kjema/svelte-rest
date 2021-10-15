@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Pokemon } from 'features/pokemons/models/pokemon.model';
+	import type { Pokemon } from 'features/pokemons/shared/pokemon.model';
 
 	export let pokemon: Pokemon;
 
